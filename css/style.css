@@ -179,7 +179,9 @@ section {
 .main-content h4 {
   text-align: center;
   font-size: 1.6rem;
-  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 300;
 }
 .main-content h1 {
   text-align: center;
@@ -220,19 +222,6 @@ section {
   color: var(--main-color);
   filter: drop-shadow(0 0 8px var(--text-color));
 }
-/* .social i {
-  transform: rotateY(100deg);
-  color: var(--main-color);
-  border-top-left-radius: 50%;
-  border-bottom-right-radius: 50%;
-  backdrop-filter: brightness(88%);
-  font-size: 20px;
-  box-shadow: 0 0 20px transparent;
-  cursor: pointer;
-  margin: 7px;
-  transition: all 0.5s ease;
-}
- */
 .main-btn {
   display: flex;
   justify-content: center;
@@ -264,7 +253,6 @@ section {
   background: var(--main-color);
   color: var(--bg-color);
 }
-
 .scroll-down {
   display: block;
   position: absolute;
@@ -329,6 +317,11 @@ section {
   padding: 10px;
   box-shadow: 0 0 8px var(--main-color);
   border-radius: 5px 100px 100px 5px;
+}
+.span-about {
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 .exp-area p {
   font-weight: 600;

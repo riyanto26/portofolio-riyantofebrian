@@ -34,6 +34,7 @@
     <!-- Link Google Fonts -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Portofolio - Riyanto Febrian</title>
+    <link rel="icon" href="./img/logo.png" type="image/png">
   </head>
   <body>
     <!-- Header -->
@@ -44,14 +45,14 @@
 
       <div class="bx bx-menu" id="menu-icon"></div>
       <ul class="navlist" data-aos="zoom-in-up">
-        <li><a href="#home">Beranda</a></li>
-        <li><a href="#about">Tentang</a></li>
-        <li><a href="#skills">Keahlian</a></li>
-        <li><a href="#sertifikat">Sertifikat</a></li>
-        <li><a href="#portofolio">Portofolio</a></li>
-        <li><a href="#contact">Kontak</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#sertifikat">Certificate</a></li>
+        <li><a href="#portofolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-      <label class="theme-switch">
+      <label class="theme-switch" data-aos="fade-left">
         <input type="checkbox" id="theme-toggle" />
         <span class="slider"></span>
       </label>
@@ -61,6 +62,7 @@
     <!-- Hero -->
     <section class="hero" id="home">
       <!-- rain -->
+    <div>
       <i class="rain"></i>
       <i class="rain"></i>
       <i class="rain"></i>
@@ -282,21 +284,22 @@
       <i class="rain"></i>
       <i class="rain"></i>
       <i class="rain"></i>
+    </div>
       <!-- rain end -->
       <div id="particles-js"></div>
-      <div class="main-content" data-aos="fade-right">
-        <h4>Halo, <span>Guys</span>!</h4>
+      <div class="main-content" data-aos="fade-down">
+        <h4>Hello <span>Every One</span>!</h4>
         <h1 class="input"></h1>
         <p>
-          Saya adalah seorang Mahasiswa Teknik Informatika <br />
-          di Universitas Bina Insani (Biu), Yang saat ini sedang menjalani
+          I am an Informatics Engineering Student  <br />
+          at Bina Insani University (Biu), which is currently undergoing
           semester 3.
         </p>
 
         <div class="main-btn">
-          <a href="#about" class="btn">Klik Saya</a>
+          <a href="#about" class="btn">Click Me</a>
           <a href="./pdf/cv-saya.pdf" class="btn btn2" download="cv-saya.pdf"
-            >Unduh CV</a
+            >Download CV</a
           >
         </div>
         <div class="social">
@@ -327,19 +330,20 @@
       </div>
 
       <div class="about-text" data-aos="zoom-in-up">
-        <h3>Tentang Saya</h3>
+        <h3>About <span>Me</span></h3>
         <h2>
-          Saya seorang Mahasiswa <span>Teknik Informatika</span><br />
-          & Manusia Biasa
+            my name is | <br> <span class="span-about">Riyanto Febrian</span>
         </h2>
         <div class="exp-area">
-          <p class="exp">Pengalaman: <span>50s</span></p>
-          <p class="exp">Khodam: <span>Rembo</span></p>
-          <p class="exp">Fakta Menarik: <span>Bisa JumpShoot</span></p>
+          <p class="exp">Experience: <span>2 years</span></p>
+          <p class="exp">Student: <span>Informatics Engineering</span></p>
+          <p class="exp">Role: <span>Web Developer</span></p>
         </div>
 
         <div class="btn-about">
-          <a href="./pageAbout/about.html">Lihat Lebih Detail</a>
+          <a href="./pdf/cv-saya.pdf" download="cv-saya.pdf"
+          >Donwload CV</a
+        >
         </div>
       </div>
     </section>
@@ -348,13 +352,13 @@
     <!-- Keahlian -->
     <section class="skills" id="skills">
       <div class="skills-content" data-aos="fade-right">
-        <p class="section-subtitle">Skill Saya</p>
+        <p class="section-subtitle">my expertise</p>
         <h2 class="h3 section-title">
-          Keahlian yang<span><br />Dikuasai?</span>
+          Skills I have <span><br />Mastered?</span>
         </h2>
         <p class="section-text">
-          Disebelah kanan adalah bahasa pemrogramman dan juga tools-tools yang
-          saya kuasai ya litle-litle:3
+          On the right is the programming language and also the tools
+          I'm getting the hang of it little by little :3
         </p>
         <div class="skills-toggle" data-toggle-box>
           <button class="toggle-btn active" data-toggle-btn>Skills</button>
@@ -381,21 +385,21 @@
     <!-- Layanan -->
     <section class="sertifikat" id="sertifikat">
       <div class="center-text" data-aos="fade-down">
-        <h2>Sertifikasi <span>Saya</span></h2>
+        <h2>My <span>Certificate</span></h2>
       </div>
 
       <div class="sertifikat-content" data-aos="zoom-in-up">
         <div class="box">
           <img
             src="./img/s1/sertifikat_course_123_3207104_080224135611_page-0001.jpg"
-            alt="UI/UX Design"
+            alt=""
           />
-          <h3>Belajar Dasar Pemrograman Web</h3>
+          <h3>Learn Web Programming Basics</h3>
           <a
             href="./pdf/sertifikat_course_123_3207104_080224135611.pdf"
             download="sertifikat_course_123_3207104_080224135611.pdf"
           >
-            Unduh Sekarang
+          Download now
             <i class="ri-arrow-right-circle-fill"></i>
           </a>
         </div>
@@ -403,14 +407,14 @@
         <div class="box">
           <img
             src="./img/s2/sertifikat_course_256_3207104_170224230045_page-0001.jpg"
-            alt="UI/UX Design"
+            alt=""
           />
-          <h3>Belajar Dasar Pemrograman JavaScript</h3>
+          <h3>Learn JavaScript Programming Basics</h3>
           <a
             href="./pdf/sertifikat_course_256_3207104_170224230045.pdf"
             download="sertifikat_course_256_3207104_170224230045.pdf"
           >
-            Unduh Sekarang
+          Download now
             <i class="ri-arrow-right-circle-fill"></i>
           </a>
         </div>
@@ -418,14 +422,29 @@
         <div class="box">
           <img
             src="./img/s3/sertifikat_course_315_3207104_090224115831_page-0001.jpg"
-            alt="UI/UX Design"
+            alt=""
           />
-          <h3>Belajar Membuat Front-End Web untuk Pemula</h3>
+          <h3>Learn to Create a Web Front-End for Beginners</h3>
           <a
             href="./pdf/sertifikat_course_315_3207104_090224115831.pdf"
             download="sertifikat_course_315_3207104_090224115831.pdf"
           >
-            Unduh Sekarang
+          Download now
+            <i class="ri-arrow-right-circle-fill"></i>
+          </a>
+        </div>
+
+        <div class="box">
+          <img
+            src="./img/s4.jpg"
+            alt=""
+          />
+          <h3>Basic Arc Welding & Basic Operation OTC Daihen Robot FD Series</h3>
+          <a
+            href="./img/s4.pdf"
+            download="s4.pdf"
+          >
+          Download now
             <i class="ri-arrow-right-circle-fill"></i>
           </a>
         </div>
@@ -436,7 +455,7 @@
     <!-- Portofolio -->
     <section class="portofolio" id="portofolio">
       <div class="center-text" data-aos="fade-down">
-        <h2>Portofolio <span>Saya</span></h2>
+        <h2>My <span>Portfolio</span></h2>
       </div>
 
       <div class="portofolio-content" data-aos="zoom-in-up">
@@ -444,11 +463,11 @@
           <img src="./img/aplikasi-apotek-sederhana.png" alt="Gambar Portofolio 1" />
           <div class="main-row">
             <div class="row-text">
-              <h5>Aplikasi Apotek Sederhana</h5>
+              <h5>Simple Pharmacy App</h5>
             </div>
           </div>
           <h4>
-            Aplikasi ini dibuat untuk tugas kuliah saya menggunakan full bahasa pemrogramman java.
+            This application was made for my college assignment using the full Java programming language.
           </h4>
           <div class="row-icon">
             <a href="https://github.com/riyanto26"
@@ -461,11 +480,11 @@
           <img src="./img/e-commerce.png" alt="Gambar Portofolio 1" />
           <div class="main-row">
             <div class="row-text">
-              <h5>Website E-Commerce</h5>
+              <h5>Web E-Commerce</h5>
             </div>
           </div>
           <h4>
-            Website e-commerce sederhana pertama yang saya buat menggunakan php native, java script, html dan juga css.
+            The first simple e-commerce website that I created used native PHP, Java script, HTML and CSS.
           </h4>
           <div class="row-icon">
             <a href="https://github.com/riyanto26"
@@ -478,11 +497,11 @@
           <img src="./img/paksan.png" alt="Gambar Portofolio 1" />
           <div class="main-row">
             <div class="row-text">
-              <h5>Website Pembelajaran</h5>
+              <h5>Learning Web</h5>
             </div>
           </div>
           <h4>
-            Website ini dibuat melalui tutorial dari seorang dosen online saya di youtube yaitu Pak Sandika Galih, Di channel youtube nya yang bernama Web Programming Unpas.
+            This website was created through a tutorial from one of my online lecturers on YouTube, namely Mr. Sandika Galih, on his YouTube channel called Web Programming Unpas.
           </h4>
           <div class="row-icon">
             <a href="https://github.com/riyanto26"
@@ -495,11 +514,11 @@
           <img src="./img/porto.png" alt="Gambar Portofolio 1" />
           <div class="main-row">
             <div class="row-text">
-              <h5>Website Portofolio</h5>
+              <h5>Web Portfolio</h5>
             </div>
           </div>
           <h4>
-            Website Portofolio saya yang sederhana yang menjadi salah pembelajaran saya juga
+            My simple portfolio website is also my learning error
           </h4>
           <div class="row-icon">
             <a href="https://github.com/riyanto26"
@@ -551,15 +570,15 @@
     <section class="contact" id="contact">
       <div class="content-contact" data-aos="fade-right">
         <h1 class="title-contact">
-          Apakah anda <span>mengalami masalah</span>?
+          Are you <span>having Problems</span>?
         </h1>
         <p>
-          Silahkan berikan Pengalaman anda melalui kontak yang ada di sebelah
-          kanan
+          Please share your experience via the contact below
+          right
         </p>
-        <h3><i class="ri-map-pin-user-fill"></i> Alamat</h3>
-        <p>Jl. Indonesia Cimata landak, Kec.cihuy No.12</p>
-        <h3><i class="ri-contacts-fill"></i> Nomor</h3>
+        <h3><i class="ri-map-pin-user-fill"></i> Address</h3>
+        <p>Indonesia, Bekasi Regency | North Tambun District</p>
+        <h3><i class="ri-contacts-fill"></i> Number</h3>
         <p>085-435-534-45</p>
         <h3><i class="ri-mail-fill"></i> Email Me</h3>
         <p>riyantofebrian@gmail.com</p>
@@ -579,32 +598,32 @@
           ></a>
         </div>
         <div class="contact-line">
-          <a href="#">k o n t a k </a>
+          <a href="#">c o n t a c t </a>
         </div>
       </div>
 
       <div class="contact-form" data-aos="zoom-in">
         <form action="">
           <div class="name">
-            <h3>Nama</h3>
-            <input type="text" placeholder="Masukan Nama Anda" required />
+            <h3>Name</h3>
+            <input type="text" placeholder="Riyanto Febrian" required />
           </div>
           <div class="email">
             <h3>Email</h3>
-            <input type="email" placeholder="Masukan Email Anda" required />
+            <input type="email" placeholder="riyantofebrian@gmail.com" required />
           </div>
           <div class="text-area">
-            <h3>Pesan</h3>
+            <h3>Message</h3>
             <textarea
               name=""
               id=""
               cols="30"
               rows="10"
-              placeholder="Masukan Pesan Disini..."
+              placeholder="Masukan Pesan Disini . . ."
               required
             ></textarea>
           </div>
-          <input type="submit" name="" value="Kirim Pesan" class="send-btn" />
+          <input type="submit" name="" value="Send Message" class="send-btn" />
         </form>
       </div>
     </section>
@@ -616,7 +635,7 @@
         <p>
           &copy; 2024
           <a href="https://www.instagram.com/rrynnnnnnn_/">Riyanto Pebrian</a>.
-          Semua Hak Dilindungi.
+          All Rights Reserved.
         </p>
       </div>
 

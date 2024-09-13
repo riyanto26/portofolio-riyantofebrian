@@ -111,11 +111,11 @@ header {
 .logo img {
   width: 60px;
   height: 60px;
-  transition: all 0.5s ease;
 }
 
-.logo img:hover {
-  transform: scale(1.2);
+.logo:hover {
+ transition: all 2s ease;
+ transform: rotate(360deg);
 }
 span {
   color: var(--main-color); /* Membuat teks transparan */
@@ -145,7 +145,7 @@ span {
 }
 header.sticky {
   background: var(--bg-color);
-  box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 2);
+  box-shadow: 0 0.1rem 1rem var(--second-bg-color);
   padding: 16px 16%;
 }
 
@@ -455,14 +455,15 @@ section {
   transition: all 0.5s ease;
 }
 .skill-card:hover {
-  transform: scale(1.2);
+  transition: all 2s ease;
+  transform: rotate(360deg);
 }
 .skill-card .card-icon img {
   width: 40px;
   height: 40px;
 }
 
-/* sertifikat css */
+/* Sertifikat CSS */
 .center-text {
   text-align: center;
 }
@@ -530,6 +531,38 @@ section {
   transform: translateY(-5px) scale(1.03);
 }
 
+/* CSS untuk Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px; /* Memberi jarak antar tombol */
+}
+
+.pagination button {
+  border: 2px solid var(--main-color); /* Warna border mengikuti tema */
+  background-color: var(--second-bg-color); /* Warna latar sesuai dengan background sertifikat */
+  color: var(--text-color); /* Warna teks sesuai tema */
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 8px; /* Sesuaikan dengan sudut border sertifikat */
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px var(--main-color); /* Menambah bayangan yang mirip dengan box sertifikat */
+}
+
+.pagination button.active {
+  background-color: var(--main-color); /* Warna saat tombol aktif */
+  color: #fff; /* Warna teks saat tombol aktif */
+}
+
+.pagination button:hover {
+  background-color: transparent;
+  color: var(--main-color); /* Warna teks saat hover */
+  box-shadow: 0 0 8px var(--main-color); /* Efek bayangan saat hover */
+}
+
+
 /* portofolio css */
 .portofolio {
   background: var(--second-bg-color);
@@ -542,7 +575,7 @@ section {
   margin-top: 4.2rem;
 }
 .row img {
-  height: 220px;
+  height: 260px;
   width: 100%;
   max-width: 500px;
   border-radius: 28px;
@@ -688,7 +721,8 @@ section {
   transition: all 0.5s ease;
 }
 .social-contact i:hover {
-  transform: scale(1.2);
+  transition: all 2s ease;
+  transform: rotate(360deg);
   box-shadow: 0 0 20px var(--main-color);
 }
 .contact-form {
@@ -774,13 +808,75 @@ footer {
   border-radius: 50%;
   color: var(--text-color);
   font-size: 27px;
+}
+.scroll-top i:hover {
+  transition: all 1s ease;
+  background: var(--main-color);
+  color: var(--second-bg-color);
+  transform: scaleY(1.3);
+}
+/* footer {
+  padding: 22px 16%;
+  background: var(--second-bg-color);
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+}
+footer .logo-footer, .text-footer, .list-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+footer img {
+  width: 75px;
+  height: auto;
+}
+footer .list-footer {
+  margin-top: 3.5rem;
+  display: flex;
+  margin-bottom: 3em;
+  gap: 2.5rem;
+}
+footer .list-footer li a {
+  color: var(--text-color);
+  font-weight: 700;
+}
+.scroll-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.scroll-top i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  box-shadow: 0 0 5px var(--main-color);
+  width: 500px;
+  height: 45px;
+  border-radius: 50px;
+  color: var(--text-color);
+  font-size: 30px;
+  margin-bottom: 2rem;
   transition: all 0.5s ease;
 }
 .scroll-top i:hover {
   background: var(--main-color);
   color: var(--second-bg-color);
 }
-
+.copyright {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--other-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.copyright a {
+  color: var(--main-color);
+} */
 /* responsive */
 @media (max-width: 1700px) {
   header {
@@ -844,6 +940,21 @@ footer {
   .hero {
     height: 100vh;
   }
+.row img {
+  height: 200px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 28px;
+  margin-bottom: 1.4rem;
+  border: 2px solid var(--other-color);
+}
+.portofolio-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+  align-items: center;
+  gap: 2.3rem;
+  margin-top: 4.2rem;
+}
 }
 
 @media (max-width: 1240px) {
@@ -1647,5 +1758,7 @@ footer {
 .rain:nth-of-type(150) { animation-name: rain-150; animation-delay: 1s; animation-duration: 7s; animation-iteration-count: infinite; left: 32%; opacity: 0.6; top: -80%; } 
 @keyframes rain-150 { from { left: 32%; opacity: 0.6; top: -80%; } to { opacity: 0; top: 120%; } }
 /* Rain Css End -- */
+
+
 
 

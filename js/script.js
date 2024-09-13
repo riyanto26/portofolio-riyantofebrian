@@ -35,7 +35,7 @@ const skillsBox = document.querySelector("[data-skills-box]");
 // Fungsi untuk memperbarui konten skillsBox berdasarkan tombol yang diklik
 function updateSkillsContent(activeIndex) {
   // Hapus kelas "active" dari semua tombol untuk mengatur ulang statusnya
-  toggleBtns.forEach(btn => btn.classList.remove("active"));
+  toggleBtns.forEach((btn) => btn.classList.remove("active"));
 
   // Tambahkan kelas "active" ke tombol yang sesuai dengan indeks yang diklik
   toggleBtns[activeIndex].classList.add("active");
@@ -80,28 +80,77 @@ toggleBtns.forEach((btn, index) => {
 updateSkillsContent(0);
 
 // tema
-document.addEventListener('DOMContentLoaded', () => {
-  const themeToggle = document.getElementById('theme-toggle');
+document.addEventListener("DOMContentLoaded", () => {
+  const themeToggle = document.getElementById("theme-toggle");
   const body = document.body;
 
   // Cek dan terapkan tema yang tersimpan di localStorage
-  const savedTheme = localStorage.getItem('theme') || 'dark';
+  const savedTheme = localStorage.getItem("theme") || "dark";
   body.classList.add(`${savedTheme}-theme`);
 
   // Ubah status checkbox sesuai tema yang tersimpan
-  themeToggle.checked = savedTheme === 'light';
+  themeToggle.checked = savedTheme === "light";
 
-  themeToggle.addEventListener('change', function() {
-      if (this.checked) {
-          body.classList.remove('dark-theme');
-          body.classList.add('light-theme');
-          localStorage.setItem('theme', 'light');
-      } else {
-          body.classList.remove('light-theme');
-          body.classList.add('dark-theme');
-          localStorage.setItem('theme', 'dark');
-      }
+  themeToggle.addEventListener("change", function () {
+    if (this.checked) {
+      body.classList.remove("dark-theme");
+      body.classList.add("light-theme");
+      localStorage.setItem("theme", "light");
+    } else {
+      body.classList.remove("light-theme");
+      body.classList.add("dark-theme");
+      localStorage.setItem("theme", "dark");
+    }
   });
 });
 
+// Mengambil elemen pagination dan kotak sertifikat
+const paginationButtons = document.querySelectorAll(".pagination button");
+const certificateBoxes = document.querySelectorAll(".sertifikat-content .box");
 
+// Menentukan jumlah item per halaman dan total halaman
+const itemsPerPage = 4; // Contoh: Menampilkan 2 sertifikat per halaman
+let currentPage = 1;
+const totalPages = Math.ceil(certificateBoxes.length / itemsPerPage);
+
+// Fungsi untuk menampilkan sertifikat berdasarkan halaman
+function showCertificates(page) {
+  // Hitung indeks awal dan akhir untuk item yang akan ditampilkan
+  const startIndex = (page - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+
+  // Sembunyikan semua kotak sertifikat terlebih dahulu
+  certificateBoxes.forEach((box, index) => {
+    box.style.display =
+      index >= startIndex && index < endIndex ? "block" : "none";
+  });
+}
+
+// Fungsi untuk memperbarui tombol pagination
+function updatePaginationButtons() {
+  paginationButtons.forEach((button) => button.classList.remove("active"));
+  paginationButtons[currentPage - 1].classList.add("active");
+}
+
+// Event listener untuk tombol pagination
+paginationButtons.forEach((button, index) => {
+  button.addEventListener("click", function () {
+    if (this.textContent === "Next") {
+      // Logika untuk tombol 'Next'
+      if (currentPage < totalPages) {
+        currentPage++;
+      }
+    } else {
+      // Logika untuk tombol angka
+      currentPage = parseInt(this.textContent);
+    }
+
+    // Tampilkan sertifikat dan perbarui tombol pagination
+    showCertificates(currentPage);
+    updatePaginationButtons();
+  });
+});
+
+// Menampilkan halaman pertama dan memperbarui tombol pagination saat pertama kali dimuat
+showCertificates(currentPage);
+updatePaginationButtons();

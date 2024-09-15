@@ -119,8 +119,8 @@ section span:hover {
 /* Media queries for responsive design */
 @media (max-width: 900px) {
   section span {
-    width: calc(10vw - 2px);
-    height: calc(10vw - 2px);
+    width: calc(8vw - 2px);
+    height: calc(8vw - 2px);
   }
 
   .start-btn {
@@ -135,8 +135,8 @@ section span:hover {
 
 @media (max-width: 600px) {
   section span {
-    width: calc(20vw - 2px);
-    height: calc(20vw - 2px);
+    width: calc(15vw - 2px);
+    height: calc(15vw - 2px);
   }
 
   .start-btn {

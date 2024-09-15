@@ -312,11 +312,6 @@ section {
 }
 .exp-area {
   margin-bottom: 50px;
-  background-image: url(../img/bg-title-about.png);
-  border: 2px solid var(--other-color);
-  padding: 10px;
-  box-shadow: 0 0 8px var(--main-color);
-  border-radius: 5px 100px 100px 5px;
 }
 .span-about {
   font-style: italic;
@@ -327,10 +322,10 @@ section {
   font-weight: 600;
   font-size: 19px;
   line-height: 42px;
-  color: #fff8ea;
+  color: var(--other-color);
 }
 .exp-area p span {
-  color: #fff8ea;
+  color: var(--text-color);
   font-size: var(--p-font);
   font-weight: 400;
   margin-left: 8px;

@@ -399,7 +399,7 @@ section {
 }
 .skills-toggle {
   display: flex;
-  gap: 10px;
+  gap: 10px;  
   margin-left: 40px;
   margin-top: 30px;
 }
@@ -559,12 +559,57 @@ section {
 
 
 /* portofolio css */
+  /* Gaya modal */
+  .modal {
+    display: none; /* Hidden secara default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Pastikan modal di atas elemen lain */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Latar belakang semi transparan */
+  }
+
+  /* Gaya gambar di dalam modal */
+  .modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+  }
+
+  /* Gaya untuk caption gambar */
+  #caption {
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+  }
+
+  /* Gaya tombol close (X) */
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
 .portofolio {
   background: var(--second-bg-color);
 }
 .portofolio-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(400px, auto));
   align-items: center;
   gap: 2.3rem;
   margin-top: 4.2rem;
@@ -622,6 +667,37 @@ section {
   transform: translateY(-5px) scale(1.03);
   cursor: pointer;
 }
+
+/* Tombol untuk memilih project */
+.portfolio-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-project {
+  margin: 10px;
+  padding: 11px 25px;
+  background: transparent;
+  color: var(--text-color);
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  border: 2px solid var(--main-color);
+  transition: all 0.5s ease;
+}
+
+.btn-project:hover {
+  background: transparent;
+  color: var(--main-color);
+  box-shadow: 0 0 20px var(--main-color);
+}
+
+/* Tombol yang aktif */
+.btn-project.active {
+  background-color: var(--main-color);
+  color: var(--text-color); /* Sesuaikan dengan warna pilihan */
+}
+
 /* contact css */
 .contact {
   display: grid;
@@ -936,7 +1012,7 @@ footer .list-footer li a {
     height: 100vh;
   }
 .row img {
-  height: 200px;
+  height: 260px;
   width: 100%;
   max-width: 500px;
   border-radius: 28px;
@@ -981,6 +1057,12 @@ footer .list-footer li a {
 }
 
 @media (max-width: 950px) {
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 15px; /* Memberi jarak antar tombol */
+  }
   .hero {
     background: none;
   }
@@ -1025,6 +1107,21 @@ footer .list-footer li a {
   .box img {
     max-width: 650px;
     height: 400px;
+  }
+  .portofolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    align-items: center;
+    gap: 2.3rem;
+    margin-top: 4.2rem;
+  }
+  .row img {
+    height: 200px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 28px;
+    margin-bottom: 1.4rem;
+    border: 2px solid var(--other-color);
   }
   .contact {
     display: grid;
@@ -1422,8 +1519,75 @@ footer .list-footer li a {
     padding: 8px 16px;
     font-size: 10px;
   }
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px; /* Memberi jarak antar tombol */
+  }
+  
+  .pagination button {
+    border: 2px solid var(--main-color); /* Warna border mengikuti tema */
+    background-color: var(--second-bg-color); /* Warna latar sesuai dengan background sertifikat */
+    color: var(--text-color); /* Warna teks sesuai tema */
+    padding: 7px 10px;
+    cursor: pointer;
+    border-radius: 5px; /* Sesuaikan dengan sudut border sertifikat */
+    font-size: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px var(--main-color); /* Menambah bayangan yang mirip dengan box sertifikat */
+  }
+  .portfolio-buttons {
+    text-align: center;
+    margin-top: 15px;
+  }
+  .btn-project {
+    margin: 8px;
+    padding: 8px 18px;
+    background: transparent;
+    color: var(--text-color);
+    border-radius: 8px;
+    font-size: 10px;
+    font-weight: 600;
+    border: 2px solid var(--main-color);
+    transition: all 0.5s ease;
+  }
 }
 @media (max-width: 390px) {
+  /* CSS untuk Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px; /* Memberi jarak antar tombol */
+}
+
+.pagination button {
+  border: 2px solid var(--main-color); /* Warna border mengikuti tema */
+  background-color: var(--second-bg-color); /* Warna latar sesuai dengan background sertifikat */
+  color: var(--text-color); /* Warna teks sesuai tema */
+  padding: 7px 10px;
+  cursor: pointer;
+  border-radius: 5px; /* Sesuaikan dengan sudut border sertifikat */
+  font-size: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px var(--main-color); /* Menambah bayangan yang mirip dengan box sertifikat */
+}
+.portfolio-buttons {
+  text-align: center;
+  margin-top: 15px;
+}
+.btn-project {
+  margin: 8px;
+  padding: 8px 18px;
+  background: transparent;
+  color: var(--text-color);
+  border-radius: 8px;
+  font-size: 10px;
+  font-weight: 600;
+  border: 2px solid var(--main-color);
+  transition: all 0.5s ease;
+}
   .skill-card {
     width: 28px;
     height: 28px;

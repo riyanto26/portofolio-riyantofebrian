@@ -604,8 +604,19 @@
         <h2>My <span>Portfolio</span></h2>
       </div>
 
-      <div class="portofolio-content" data-aos="zoom-in-up">
-        <div class="row">
+      <!-- Tambahkan Tombol untuk memilih Project IT dan Project Design -->
+      <div class="portfolio-buttons" data-aos="fade-down">
+        <button class="btn-project" id="btn-it">Project IT</button>
+        <button class="btn-project" id="btn-design">Project Design</button>
+      </div>
+
+      <div
+        class="portofolio-content"
+        data-aos="zoom-in-up"
+        id="portfolio-cards"
+      >
+        <!-- Project IT Cards -->
+        <div class="row project-it">
           <img
             src="./img/aplikasi-apotek-sederhana.png"
             alt="Gambar Portofolio 1"
@@ -626,16 +637,16 @@
           </div>
         </div>
 
-        <div class="row">
-          <img src="./img/e-commerce.png" alt="Gambar Portofolio 1" />
+        <div class="row project-it">
+          <img src="./img/e-commerce.png" alt="Gambar Portofolio 2" />
           <div class="main-row">
             <div class="row-text">
               <h5>Web E-Commerce</h5>
             </div>
           </div>
           <h4>
-            The first simple e-commerce website that I created used native PHP,
-            Java script, HTML and CSS.
+            The first simple e-commerce website that I created using native PHP,
+            JavaScript, HTML, and CSS.
           </h4>
           <div class="row-icon">
             <a href="https://github.com/riyanto26"
@@ -644,7 +655,7 @@
           </div>
         </div>
 
-        <div class="row">
+        <div class="row project-it">
           <img src="./img/paksan.png" alt="Gambar Portofolio 1" />
           <div class="main-row">
             <div class="row-text">
@@ -653,8 +664,7 @@
           </div>
           <h4>
             This website was created through a tutorial from one of my online
-            lecturers on YouTube, namely Mr. Sandika Galih, on his YouTube
-            channel called Web Programming Unpas.
+            lecturers on YouTube, namely Mr. Sandika Galih
           </h4>
           <div class="row-icon">
             <a href="https://github.com/riyanto26"
@@ -663,59 +673,155 @@
           </div>
         </div>
 
-        <div class="row">
-          <img src="./img/porto.png" alt="Gambar Portofolio 1" />
+        <!-- Project Design Cards (placeholder, nanti bisa diganti) -->
+        <div class="row project-design" style="display: none">
+          <img src="./img/desain1.jpg" alt="Gambar Portofolio 3" />
           <div class="main-row">
             <div class="row-text">
-              <h5>Web Portfolio</h5>
-            </div>
-          </div>
-          <h4>My simple portfolio website is also my learning error</h4>
-          <div class="row-icon">
-            <a href="https://github.com/riyanto26"
-              ><i class="ri-github-fill"></i
-            ></a>
-          </div>
-        </div>
-
-        <div class="row">
-          <img src="./img/hello.png" alt="Gambar Portofolio 1" />
-          <div class="main-row">
-            <div class="row-text">
-              <h5>Website Hello World</h5>
+              <h5>Poster Design</h5>
             </div>
           </div>
           <h4>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quia
-            minima labore.
+            This is a placeholder for a design project. Replace with real data
+            later.
           </h4>
           <div class="row-icon">
-            <a href="https://github.com/riyanto26"
-              ><i class="ri-github-fill"></i
-            ></a>
+            <a href="https://www.instagram.com/novicedesigner.id/"
+              ><i class="ri-instagram-fill"></i
+                ></a>
           </div>
         </div>
 
-        <div class="row">
-          <img src="./img/hello.png" alt="Gambar Portofolio 1" />
+        <div class="row project-design" style="display: none">
+          <img src="./img/desain2.jpg" alt="Gambar Portofolio 4" />
           <div class="main-row">
             <div class="row-text">
-              <h5>Website Hello World</h5>
+              <h5>Poster Design</h5>
             </div>
           </div>
-          <h4>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quia
-            minima labore.
-          </h4>
+          <h4>This is another placeholder for a design project.</h4>
           <div class="row-icon">
-            <a href="https://github.com/riyanto26"
-              ><i class="ri-github-fill"></i
-            ></a>
+            <a href="https://www.instagram.com/novicedesigner.id/"
+              ><i class="ri-instagram-fill"></i
+                ></a>
           </div>
         </div>
+
+        <div class="row project-design" style="display: none">
+          <img src="./img/desain3.jpg" alt="Gambar Portofolio 4" />
+          <div class="main-row">
+            <div class="row-text">
+              <h5>Poster Design</h5>
+            </div>
+          </div>
+          <h4>This is another placeholder for a design project.</h4>
+          <div class="row-icon">
+            <a href="https://www.instagram.com/novicedesigner.id/"
+              ><i class="ri-instagram-fill"></i
+                ></a>
+          </div>
+        </div>
+
+        <div class="row project-design" style="display: none">
+          <img src="./img/desain4.jpg" alt="Gambar Portofolio 4" />
+          <div class="main-row">
+            <div class="row-text">
+              <h5>Poster Design</h5>
+            </div>
+          </div>
+          <h4>This is another placeholder for a design project.</h4>
+          <div class="row-icon">
+            <a href="https://www.instagram.com/novicedesigner.id/"
+              ><i class="ri-instagram-fill"></i
+                ></a>
+          </div>
+        </div>
+
+        <div class="row project-design" style="display: none">
+          <img src="./img/desain5.jpg" alt="Gambar Portofolio 4" />
+          <div class="main-row">
+            <div class="row-text">
+              <h5>Hoodie Design</h5>
+            </div>
+          </div>
+          <h4>This is another placeholder for a design project.</h4>
+          <div class="row-icon">
+            <a href="https://www.instagram.com/novicedesigner.id/"
+              ><i class="ri-instagram-fill"></i
+                ></a>
+          </div>
+        </div>
+
+        <div class="row project-design" style="display: none">
+          <img src="./img/desain6.jpg" alt="Gambar Portofolio 4" />
+          <div class="main-row">
+            <div class="row-text">
+              <h5>Hoodie Design</h5>
+            </div>
+          </div>
+          <h4>This is another placeholder for a design project.</h4>
+          <div class="row-icon">
+            <a href="https://www.instagram.com/novicedesigner.id/"
+              ><i class="ri-instagram-fill"></i
+                ></a>
+          </div>
+        </div>
+
+        <div class="row project-design" style="display: none">
+          <img src="./img/desain7.png" alt="Gambar Portofolio 4" />
+          <div class="main-row">
+            <div class="row-text">
+              <h5>Poster Design</h5>
+            </div>
+          </div>
+          <h4>This is another placeholder for a design project.</h4>
+          <div class="row-icon">
+            <a href="https://www.instagram.com/novicedesigner.id/"
+              ><i class="ri-instagram-fill"></i
+                ></a>
+          </div>
+        </div>
+
+        <div class="row project-design" style="display: none">
+          <img src="./img/desain8.png" alt="Gambar Portofolio 4" />
+          <div class="main-row">
+            <div class="row-text">
+              <h5>Logo Design</h5>
+            </div>
+          </div>
+          <h4>This is another placeholder for a design project.</h4>
+          <div class="row-icon">
+            <a href="https://www.instagram.com/novicedesigner.id/"
+              ><i class="ri-instagram-fill"></i
+                ></a>
+          </div>
+        </div>
+
+        <div class="row project-design" style="display: none">
+          <img src="./img/desain9.jpg" alt="Gambar Portofolio 4" />
+          <div class="main-row">
+            <div class="row-text">
+              <h5>Logo Design</h5>
+            </div>
+          </div>
+          <h4>This is another placeholder for a design project.</h4>
+          <div class="row-icon">
+            <a href="https://www.instagram.com/novicedesigner.id/"
+              ><i class="ri-instagram-fill"></i
+                ></a>
+          </div>
+        </div>
+
       </div>
     </section>
     <!-- Portofolio -->
+
+    <!-- Modal untuk menampilkan gambar -->
+      <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+      </div>
 
     <!-- contact -->
     <section class="contact" id="contact">

@@ -154,3 +154,76 @@ paginationButtons.forEach((button, index) => {
 // Menampilkan halaman pertama dan memperbarui tombol pagination saat pertama kali dimuat
 showCertificates(currentPage);
 updatePaginationButtons();
+
+
+// JavaScript untuk menampilkan dan menyembunyikan project IT dan Design
+document.getElementById("btn-it").addEventListener("click", function() {
+  const itProjects = document.querySelectorAll(".project-it");
+  const designProjects = document.querySelectorAll(".project-design");
+
+  // Tampilkan semua project IT
+  itProjects.forEach(project => project.style.display = "block");
+
+  // Sembunyikan semua project Design
+  designProjects.forEach(project => project.style.display = "none");
+});
+
+document.getElementById("btn-design").addEventListener("click", function() {
+  const itProjects = document.querySelectorAll(".project-it");
+  const designProjects = document.querySelectorAll(".project-design");
+
+  // Sembunyikan semua project IT
+  itProjects.forEach(project => project.style.display = "none");
+
+  // Tampilkan semua project Design
+  designProjects.forEach(project => project.style.display = "block");
+});
+  
+
+const btnIT = document.getElementById('btn-it');
+const btnDesign = document.getElementById('btn-design');
+
+btnIT.addEventListener('click', function() {
+  btnIT.classList.add('active');
+  btnDesign.classList.remove('active');
+  // Tambahkan logika untuk menampilkan project IT
+});
+
+btnDesign.addEventListener('click', function() {
+  btnDesign.classList.add('active');
+  btnIT.classList.remove('active');
+  // Tambahkan logika untuk menampilkan project Design
+});
+
+
+ // Mendapatkan modal
+  var modal = document.getElementById("imageModal");
+
+  // Mendapatkan gambar dan elemen modal
+  var modalImg = document.getElementById("modalImage");
+  var captionText = document.getElementById("caption");
+
+  // Menambahkan event klik ke gambar di dalam section portfolio
+  var images = document.querySelectorAll(".portofolio-content img");
+  images.forEach((img) => {
+    img.onclick = function () {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    };
+  });
+
+  // Mendapatkan elemen close untuk menutup modal
+  var closeBtn = document.getElementsByClassName("close")[0];
+
+  // Tutup modal saat klik tombol X
+  closeBtn.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  // Tutup modal saat klik di area luar gambar
+  modal.onclick = function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };

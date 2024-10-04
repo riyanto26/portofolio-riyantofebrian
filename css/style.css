@@ -239,13 +239,14 @@ section {
 .btn:hover {
   background: transparent;
   color: var(--main-color);
+  border: 3px solid var(--main-color);
   box-shadow: 0 0 20px var(--main-color);
 }
 .btn2 {
   border-radius: 0 15px 15px 0;
   background: transparent;
   color: var(--main-color);
-  border: 2px solid var(--main-color);
+  border: 3px solid var(--main-color);
   margin-left: 15px;
   transition: all 0.5s ease;
 }
@@ -508,7 +509,7 @@ section {
   transition: all 0.5s ease;
 }
 .box a:hover {
-  background: transparent;
+  background: var(--main-color);
   box-shadow: 0 0 8px var(--main-color);
 }
 .box i {

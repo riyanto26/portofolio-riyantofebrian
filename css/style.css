@@ -24,7 +24,7 @@
 body.light-theme {
   --text-color: #393e46;
   --bg-color: #fff8ea;
-  --second-bg-color: #d7c0ae;
+  --second-bg-color: #F9EBCC;
   --main-color: #3f72af;
   --other-color: #323232;
 }
@@ -34,7 +34,7 @@ body.dark-theme {
   --text-color: #f6f6f6;
   --bg-color: #393e46;
   --second-bg-color: #323232;
-  --main-color: #4983c9;
+  --main-color: #3f72af;
   --other-color: #fff8ea;
 }
 

@@ -48,7 +48,6 @@ function updateSkillsContent(activeIndex) {
         <li><div class="skill-card"><div class="card-icon"><img src="icon/java-script.png" alt="logo skill 1" /></div></div></li>
         <li><div class="skill-card"><div class="card-icon"><img src="icon/java.png" alt="logo skill 3" /></div></div></li>
         <li><div class="skill-card"><div class="card-icon"><img src="icon/python.png" alt="logo skill 2" /></div></div></li>
-        <li><div class="skill-card"><div class="card-icon"><img src="icon/react.png" alt="logo skill 4" /></div></div></li>
         <li><div class="skill-card"><div class="card-icon"><img src="icon/cplus.png" alt="logo skill 4" /></div></div></li>
         <li><div class="skill-card"><div class="card-icon"><img src="icon/php.png" alt="logo skill 4" /></div></div></li>
         <li><div class="skill-card"><div class="card-icon"><img src="icon/html.png" alt="logo skill 4" /></div></div></li>
@@ -59,8 +58,8 @@ function updateSkillsContent(activeIndex) {
     // Jika tombol kedua (Tools) diklik, tampilkan daftar tools
     skillsBox.innerHTML = `
       <ul class="skills-list">
+      <li><div class="skill-card"><div class="card-icon"><img src="icon/figma.png" alt="logo tool 2" /></div></div></li>
         <li><div class="skill-card"><div class="card-icon"><img src="icon/visual-studio.png" alt="logo tool 1" /></div></div></li>
-        <li><div class="skill-card"><div class="card-icon"><img src="icon/figma.png" alt="logo tool 2" /></div></div></li>
         <li><div class="skill-card"><div class="card-icon"><img src="icon/photoshop.png" alt="logo tool 3" /></div></div></li>
         <li><div class="skill-card"><div class="card-icon"><img src="icon/illustrator.png" alt="logo tool 4" /></div></div></li>
       </ul>

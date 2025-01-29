@@ -883,7 +883,8 @@
 
       // Mendapatkan ID pesan unik dan menyimpan pesan ke Firebase
       const messageId = Date.now(); // Menggunakan timestamp sebagai ID unik
-      const timestamp = new Date(messageId).toLocaleString(); // Mengambil waktu pesan
+      const timestamp = new Date(messageId).toISOString();  // Menggunakan waktu UTC
+// Mengambil waktu pesan
 
       set(ref(db, 'messages/' + messageId), {
         username: username, // Nama pengirim
@@ -907,10 +908,14 @@
         const chatBox = document.getElementById("chat-box");
         chatBox.innerHTML = Object.keys(messages).map(key => {
           const messageData = messages[key];
-          const messageTime = new Date(messageData.timestamp);
-          const hours = messageTime.getHours().toString().padStart(2, '0');
-          const minutes = messageTime.getMinutes().toString().padStart(2, '0');
-          const timestamp = `${hours}:${minutes}`;
+        const messageTime = new Date(messageData.timestamp);
+
+        // Mengonversi waktu ke zona waktu lokal dengan format HH:MM
+        const options = { hour: '2-digit', minute: '2-digit' };
+        const timestamp = messageTime.toLocaleString('id-ID', options);
+
+// Menampilkan waktu dalam format jam:menit
+
           return `
             <div class="message-card">
               <div class="message-card-header">

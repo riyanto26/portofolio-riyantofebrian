@@ -227,24 +227,27 @@ btnDesign.addEventListener('click', function() {
     }
   };
 
-// Fungsi untuk menampilkan jam dalam format HH:MM:SS
-function updateClock() {
-  const now = new Date();
-
-  // Mengambil waktu dalam format HH:MM:SS dengan toLocaleTimeString()
-  let timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
-
-  // Memisahkan jam, menit, dan detik
-  let [hours, minutes, seconds] = timeString.split(':');
-
-  // Menampilkan jam, menit, dan detik pada elemen yang sesuai
-  document.getElementById('clock-hours').textContent = hours;
-  document.getElementById('clock-minutes').textContent = minutes;
-  document.getElementById('clock-seconds').textContent = seconds;
-}
-
-// Memperbarui jam setiap detik
-setInterval(updateClock, 1000);
-
-// Inisialisasi jam pertama kali saat halaman dimuat
-updateClock();
+  function updateClock() {
+    const now = new Date();
+    
+    // Debug: lihat nilai `now` di console
+    console.log('Current time:', now);
+  
+    let timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+  
+    // Debug: lihat timeString sebelum diproses
+    console.log('Formatted time string:', timeString);
+  
+    let [hours, minutes, seconds] = timeString.split(':');
+  
+    // Debug: lihat jam, menit, detik yang dipisah
+    console.log('Hours:', hours, 'Minutes:', minutes, 'Seconds:', seconds);
+  
+    document.getElementById('clock-hours').textContent = hours;
+    document.getElementById('clock-minutes').textContent = minutes;
+    document.getElementById('clock-seconds').textContent = seconds;
+  }
+  
+  setInterval(updateClock, 1000);
+  updateClock();
+  

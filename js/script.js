@@ -227,17 +227,15 @@ btnDesign.addEventListener('click', function() {
     }
   };
 
-  // Fungsi untuk menampilkan jam dalam format HH:MM:SS
+// Fungsi untuk menampilkan jam dalam format HH:MM:SS
 function updateClock() {
   const now = new Date();
-  let hours = now.getHours();
-  let minutes = now.getMinutes();
-  let seconds = now.getSeconds();
 
-  // Tambahkan 0 di depan angka jika kurang dari 10
-  hours = (hours < 10) ? '0' + hours : hours;
-  minutes = (minutes < 10) ? '0' + minutes : minutes;
-  seconds = (seconds < 10) ? '0' + seconds : seconds;
+  // Mengambil waktu dalam format HH:MM:SS dengan toLocaleTimeString()
+  let timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
+  // Memisahkan jam, menit, dan detik
+  let [hours, minutes, seconds] = timeString.split(':');
 
   // Menampilkan jam, menit, dan detik pada elemen yang sesuai
   document.getElementById('clock-hours').textContent = hours;

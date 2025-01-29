@@ -226,3 +226,27 @@ btnDesign.addEventListener('click', function() {
       modal.style.display = "none";
     }
   };
+
+  // Fungsi untuk menampilkan jam dalam format HH:MM:SS
+function updateClock() {
+  const now = new Date();
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  let seconds = now.getSeconds();
+
+  // Tambahkan 0 di depan angka jika kurang dari 10
+  hours = (hours < 10) ? '0' + hours : hours;
+  minutes = (minutes < 10) ? '0' + minutes : minutes;
+  seconds = (seconds < 10) ? '0' + seconds : seconds;
+
+  // Menampilkan jam, menit, dan detik pada elemen yang sesuai
+  document.getElementById('clock-hours').textContent = hours;
+  document.getElementById('clock-minutes').textContent = minutes;
+  document.getElementById('clock-seconds').textContent = seconds;
+}
+
+// Memperbarui jam setiap detik
+setInterval(updateClock, 1000);
+
+// Inisialisasi jam pertama kali saat halaman dimuat
+updateClock();

@@ -153,6 +153,25 @@ header.sticky {
 section {
   padding: 110px 16% 90px;
 }
+.clock {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+#clock-hours {
+  color: var(--main-color); /* Warna untuk jam */
+}
+
+#clock-minutes {
+  color: var(--text-color); /* Warna untuk menit */
+}
+
+#clock-seconds {
+  color: var(--text-color); /* Warna untuk detik */
+}
+
 #particles-js {
   position: absolute;
   top: 0;
@@ -620,13 +639,12 @@ section {
   height: 260px;
   width: 100%;
   max-width: 500px;
-  border-radius: 28px;
   margin-bottom: 1.4rem;
   border: 2px solid var(--other-color);
 }
 .row {
   background: var(--bg-color);
-  border-radius: 28px;
+  border-radius: 10px;
   border: 1px solid transparent;
   box-shadow: 0 0 5px var(--main-color);
   padding: 20px;
@@ -856,7 +874,7 @@ form .send-btn:hover {
 /* footer css */
 footer {
   padding: 22px 16%;
-  background: var(--second-bg-color);
+  background: var(--bg-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -956,7 +974,6 @@ footer {
     height: 260px;
     width: 100%;
     max-width: 500px;
-    border-radius: 28px;
     margin-bottom: 1.4rem;
     border: 2px solid var(--other-color);
   }
@@ -1060,7 +1077,6 @@ footer {
     height: 200px;
     width: 100%;
     max-width: 400px;
-    border-radius: 28px;
     margin-bottom: 1.4rem;
     border: 2px solid var(--other-color);
   }
@@ -1550,5 +1566,199 @@ footer {
     gap: 13px;
     margin: 0;
     padding: 0;
+  }
+}
+/* Styling untuk Section Ulasan */
+.ulasan {
+  padding: 3rem 16%;
+  background-color: var(--second-bg-color);
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+.center-text {
+  padding: 3rem;
+}
+#chat-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--bg-color);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#chat-box {
+  height: 300px;
+  overflow-y: auto;
+  padding: 1rem;
+  background: var(--second-bg-color);
+  border-radius: 6px;
+  border: 1px solid var(--main-color);
+  margin-bottom: 10px;
+}
+
+/* Styling untuk setiap Card Komentar */
+.message-card {
+  background-color: var(--bg-color);
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--main-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.message-card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.message-card-header strong {
+  font-weight: 600;
+  color: var(--main-color);
+}
+
+.message-card-header .timestamp {
+  font-size: 12px;
+  color: var(--other-color);
+}
+
+.message-card-body p {
+  margin: 0;
+  font-size: 16px;
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+/* Styling untuk Input Komentar */
+#chat-input, #username {
+  padding: 12px;
+  border: 2px solid var(--main-color);
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  background: var(--second-bg-color);
+  color: var(--text-color);
+  transition: border-color 0.3s;
+  margin-bottom: 10px;
+}
+
+#chat-input::placeholder, #username::placeholder {
+  color: var(--other-color);
+}
+
+#chat-input:focus, #username:focus {
+  border-color: var(--main-color);
+}
+
+/* Button Kirim */
+#send-btn {
+  background: var(--main-color);
+  color: var(--bg-color);
+  padding: 12px 24px;
+  border: 2px solid var(--main-color);
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#send-btn:hover {
+  background: transparent;
+  color: var(--main-color);
+  box-shadow: 0 0 8px var(--main-color);
+}
+
+/* Styling untuk Sisi Kanan (Pesan Ulasan) */
+.ulasan-right {
+  flex: 0.4; /* Ukuran relatif */
+  background-color: var(--bg-color);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ulasan-right p {
+  font-size: 18px;
+  color: var(--text-color);
+  text-align: center;
+}
+
+/* Scrollbar styling */
+#chat-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+#chat-box::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 4px;
+}
+
+#chat-box::-webkit-scrollbar-track {
+  background: var(--second-bg-color);
+}
+
+/* Media Query untuk Responsif di Tablet (Ukuran Layar antara 768px - 1024px) */
+@media (max-width: 1024px) {
+  .ulasan {
+    padding: 2rem 10%;
+  }
+
+  .ulasan-container {
+    flex-direction: column; /* Menjadikan container menjadi satu kolom */
+    gap: 1.5rem; /* Menambahkan jarak antara elemen */
+  }
+
+  .ulasan-left, .ulasan-right {
+    flex: 1; /* Setiap sisi memiliki lebar yang sama */
+  }
+
+  .section-header h2 {
+    font-size: 26px; /* Ukuran font judul sedikit lebih kecil */
+  }
+
+  #chat-box {
+    height: 250px; /* Menyesuaikan tinggi chat box */
+  }
+
+  .message-card-body p {
+    font-size: 14px; /* Menyesuaikan ukuran teks pada pesan */
+  }
+}
+
+/* Media Query untuk Responsif di Mobile (Ukuran Layar < 768px) */
+@media (max-width: 768px) {
+  .ulasan {
+    padding: 2rem 8%;
+  }
+
+  .ulasan-container {
+    flex-direction: column; /* Menjadikan container menjadi satu kolom */
+    gap: 1rem; /* Menambahkan jarak antar elemen */
+  }
+
+  .ulasan-left, .ulasan-right {
+    flex: 1; /* Setiap sisi memiliki lebar yang sama */
+  }
+
+  .section-header h2 {
+    font-size: 24px; /* Ukuran font judul lebih kecil */
+  }
+
+  #chat-box {
+    height: 200px; /* Menyesuaikan tinggi chat box */
+  }
+
+  .message-card-body p {
+    font-size: 12px; /* Menyesuaikan ukuran teks pada pesan */
+  }
+
+  #send-btn {
+    padding: 10px 20px; /* Menyesuaikan ukuran tombol kirim */
+  }
+
+  #chat-input, #username {
+    font-size: 12px; /* Menyesuaikan ukuran font input */
   }
 }

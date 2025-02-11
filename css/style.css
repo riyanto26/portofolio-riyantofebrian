@@ -206,7 +206,7 @@ section {
   display: inline-block;
   padding: 11px 20px;
   background: var(--main-color);
-  color: var(--text-color);
+  color: #fff;
   border-radius: 15px 0 0 15px;
   font-size: 15px;
   font-weight: 600;
@@ -384,7 +384,7 @@ section {
   transition: all 0.5s ease;
 }
 .toggle-btn.active {
-  color: var(--text-color);
+  color: #fff;
   background-color: var(--main-color);
 }
 .toggle-btn:hover {
@@ -635,7 +635,7 @@ section {
 }
 .btn-project.active {
   background-color: var(--main-color);
-  color: var(--text-color);
+  color: #fff;
 }
 .contact {
   display: grid;
@@ -1534,7 +1534,7 @@ footer {
 }
 #send-btn {
   background: var(--main-color);
-  color: var(--text-color);
+  color: #fff;
   padding: 12px 24px;
   border: 2px solid var(--main-color);
   border-radius: 8px;
